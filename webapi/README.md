@@ -10,3 +10,6 @@ dotnet add package Microsoft.EntityFrameworkCore.Design --version 8.0.0-preview.
 dotnet ef database update
 
 dotnet ef migrations add XXXX --- luego el anterior 
+
+Como ejecutar el Docker
+docker-compose up -d --build

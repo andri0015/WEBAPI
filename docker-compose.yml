@@ -1,0 +1,19 @@
+version: "3.8"
+
+services:
+
+  api:
+    build: ./api
+    working_dir: /api
+    container_name: api-flask
+    command: flask --app consult run --host 0.0.0.0 --debug
+    ports:
+      - "8000:5000"
+    volumes: # is no too necesary in prod. environment
+      - ./api:/app/
+
+  webapi:
+    build: ./webapi
+    container_name: webapi
+    ports:
+      - "8005:5000"
